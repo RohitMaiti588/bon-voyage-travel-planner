@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f3e8">
+  <meta name="description" content="Bon Voyage — your personal travel itinerary planner.">
+  <title>Bon Voyage — Travel Itinerary Planner</title>
+  <link rel="icon" type="image/svg+xml" href="logo.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="#home" aria-label="Bon Voyage home"><img src="logo.svg" alt="Bon Voyage logo">
+    <span>Bon Voyage<small>TRAVEL ITINERARY PLANNER</small></span>
+  </a>
+  <nav id="mainNav">
+    <a href="#home">Home</a>
+    <a href="#trips">My Trips</a>
+    <a href="#planner">Planner</a>
+    <a href="#about">About</a>
+  </nav>
+  <div class="top-actions">
+    <button id="themeToggle" class="icon-btn" title="Toggle dark mode" aria-label="Toggle dark mode">☾</button>
+    <button id="authButton" class="outline-btn">Log in</button>
+    <button id="newTripTop" class="primary-btn">＋ New trip</button>
+    <button id="menuToggle" class="icon-btn menu-toggle" aria-label="Open menu">☰</button>
+  </div>
+</header>
+
+<main>
+
+<section id="home" class="hero">
+  <div class="hero-copy"><div class="eyebrow">
+    <span class="eyebrow-dot"></span>
+     YOUR NEXT CHAPTER STARTS HERE</div>
+     <h1>Collect moments.<br><em>Not just miles.</em></h1>
+     <p class="hero-sub">Every great adventure starts with a plan. Keep your destinations, stays, activities, and travel details together in one beautiful place.</p>
+     <div class="hero-buttons">
+      <button class="primary-btn large" id="heroCreate">Plan a trip <span>↗</span></button>
+      <a class="text-link" href="#trips">Explore my trips <span>→</span></a>
+     </div>
+     <div class="hero-note">
+      <div class="avatar-stack">
+       <span>✈</span>
+       <span>⌁</span>
+       <span>☼</span>
+      </div>
+      <span>Your plans, all in one place.</span>
+     </div>
+    </div>
+    <div class="hero-art">
+     <div class="photo-main photo" role="img" aria-label="Coastal destination"></div>
+     <div class="photo-small photo" role="img" aria-label="Mountain destination"></div>
+     <div class="photo-tiny photo" role="img" aria-label="Tropical destination"></div>
+     <div class="quote-card"><span>“</span><p>We travel not to escape life, but for life not to escape us.</p><small>— Robyn Yong</small></div>
+     <div class="round-stamp">
+      GO<br>SEE<br>MORE <span>✳</span>
+     </div>
+    </div>
+   </div>
+
+  </section>
+
+  <section class="section dashboard" id="trips">
+   <div class="section-heading">
+    <div>
+     <div class="eyebrow">THE JOURNEY BOARD</div>
+     <h2>Your trips, <em>your way.</em></h2>
+     <p class="muted">All the little details that make a big adventure.</p>
+    </div>
+    <button class="primary-btn" id="newTrip">＋ Create a trip</button>
+   </div>
+<div class="stats-grid">
+  <article class="stat-card">
+    <span class="stat-icon">⌖</span>
+    <div>
+      <small>TRIPS PLANNED</small>
+      <strong id="tripCount">0</strong>
+    </div>
+  </article>
+  <article class="stat-card">
+    <span class="stat-icon">♡</span>
+    <div>
+      <small>FAVOURITES</small>
+      <strong id="favCount">0</strong>
+    </div>
+  </article>
+  <article class="stat-card">
+    <span class="stat-icon">◷</span>
+    <div>
+      <small>UPCOMING</small>
+      <strong id="upcomingCount">0</strong>
+    </div>
+  </article>
+  <article class="stat-card">
+    <span class="stat-icon">₹</span>
+    <div>
+      <small>PLANNED BUDGET</small>
+      <strong id="budgetTotal">₹0</strong>
+    </div>
+  </article>
+</div>
+<div class="tools-row">
+  <div class="searchbox">
+    <span>⌕</span>
+    <input id="searchInput" type="search" placeholder="Search trips or destinations…" aria-label="Search trips">
+  </div>
+  <select id="tripFilter" aria-label="Filter trips">
+    <option value="all">All trips</option>
+    <option value="upcoming">Upcoming</option>
+    <option value="past">Past trips</option>
+    <option value="favorites">Favourites</option>
+  </select>
+  <button id="printTrips" class="outline-btn">↗ Print / Save PDF</button>
+</div>
+<div id="tripGrid" class="trip-grid"></div>
+<div id="emptyState" class="empty-state">
+  <div class="empty-illustration">✈</div>
+  <h3>Your next adventure is waiting.</h3>
+  <p>Create your first trip and keep every detail in one place.</p>
+  <button class="primary-btn" id="emptyCreate">Plan my first trip</button>
+</div>
+</section>
+
+<section id="planner" class="section planner-section">
+  <div class="planner-banner"><div>
+    <div class="eyebrow">YOUR TRAVEL TOOLKIT</div>
+    <h2>Good plans. <em>Great stories.</em></h2>
+    <p>Build a day-by-day itinerary, keep reservations close, and travel with a little more peace of mind.</p>
+  </div>
+  <div class="banner-doodle">✳<span>✈</span>⌁</div></div>
+  <div class="feature-grid"><article class="feature">
+    <div class="feature-icon blue">⌖</div>
+    <h3>Places to go</h3>
+    <p>Keep cities, landmarks, and must-see spots together.</p>
+  </article>
+  <article class="feature">
+    <div class="feature-icon coral">◷</div>
+    <h3>Every little detail</h3>
+    <p>Track transport, check-ins, activities, and reservations.</p>
+  </article>
+  <article class="feature">
+    <div class="feature-icon yellow">₹</div>
+    <h3>Budget at a glance</h3>
+    <p>Estimate costs and know where your travel money goes.</p>
+  </article>
+  <article class="feature">
+    <div class="feature-icon green">♡</div>
+    <h3>Travel with confidence</h3>
+    <p>Save favourites, note emergency contacts, and add a backup plan.</p>
+  </article>
+</div>
+</section>
+
+<section id="about" class="about-section"><div class="about-inner">
+  <div>
+    <div class="eyebrow">MADE FOR THE CURIOUS</div>
+    <h2>Less planning stress.<br><em>More looking forward.</em></h2>
+  </div>
+  <p>Bon Voyage is a student-created travel planner designed to bring your trip essentials into one simple, friendly workspace. From the first destination idea to the last dinner reservation, your plan stays organised and easy to review.</p>
+</div>
+</section>
+</main>
+
+<footer>
+  <a class="brand footer-brand" href="#home">
+    <img src="logo.svg" alt="Bon Voyage logo">
+    <span>Bon Voyage<small>TRAVEL ITINERARY PLANNER</small></span>
+  </a>
+  <p>Made with ☼ by <strong>Tarun Kumar, Rohit Maiti &amp; Piyush Kumar</strong></p>
+  <a href="#home" class="back-top">Back to top ↑</a>
+  <small class="copyright">© <span id="year"></span> Bon Voyage. Plan kindly. Travel lightly.</small></footer>
+
+<div class="modal-backdrop" id="tripModal" aria-hidden="true">
+<section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-header">
+    <div>
+      <div class="eyebrow">MAKE IT A JOURNEY</div>
+      <h2 id="modalTitle">Plan a new trip</h2>
+    </div>
+    <button class="icon-btn close-modal" data-close="tripModal" aria-label="Close">✕</button>
+  </div>
+  <form id="tripForm">
+    <input type="hidden" id="tripId">
+    <div class="form-grid">
+      <label class="full">Trip name *<input id="tripName" required maxlength="70" placeholder="e.g. Summer in Italy"></label>
+      <label class="full">Trip cover image<input id="tripImage" type="file" accept="image/*"><small>Choose a photo from your device (keep it under 1 MB).</small></label>
+      <label>Destination / city *<input id="destination" required placeholder="e.g. Rome, Italy"></label>
+      <label>Region / landmarks<input id="landmarks" placeholder="e.g. Colosseum, Tuscany"></label>
+      <label>Departure date *<input id="startDate" type="date" required></label>
+      <label>Return date *<input id="endDate" type="date" required></label>
+      <label>Departure time<input id="departureTime" type="time"></label>
+      <label>Arrival time<input id="arrivalTime" type="time"></label>
+      <label>Estimated budget (₹)<input id="budget" type="number" min="0" step="100" placeholder="25000"></label>
+      <label>Travel style<select id="travelStyle"><option>Leisure</option><option>Adventure</option><option>Family</option><option>Business</option><option>Solo</option><option>Romantic</option></select></label>
+      <label class="full">Trip notes / daily activities<textarea id="activities" rows="3" placeholder="Day 1: arrive and check in…&#10;Day 2: sightseeing tour…"></textarea></label>
+      <label>Transport type<select id="transport"><option value="">Choose transport</option><option>Flight</option><option>Train</option><option>Bus</option><option>Rental car</option><option>Personal vehicle</option><option>Ferry / boat</option><option>Other</option></select></label>
+      <label>Transport details<input id="transportDetails" placeholder="Flight number, train, pickup details"></label>
+      <label>Accommodation<input id="hotel" placeholder="Hotel name and address"></label>
+      <label>Reservation / confirmation no.<input id="confirmation" placeholder="Booking reference"></label>
+      <label>Check-in date<input id="checkinDate" type="date"></label>
+      <label>Check-in time<input id="checkinTime" type="time"></label>
+      <label>Check-out date<input id="checkoutDate" type="date"></label>
+      <label>Check-out time<input id="checkoutTime" type="time"></label>
+      <label class="full">Emergency contact<input id="emergency" placeholder="Name and phone number"></label>
+      <div class="document-box full"><h3>Important documents</h3><p>Tick the documents you need to carry.</p><div class="check-row"><label class="check-label"><input id="passport" type="checkbox"> Passport</label><label class="check-label"><input id="visa" type="checkbox"> Visa</label></div></div>
+      <label class="full">Backup plan<textarea id="backup" rows="4" placeholder="Write an alternate route, emergency plan, backup accommodation, or other notes…"></textarea></label>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="outline-btn" data-close="tripModal">Cancel</button>
+      <button type="submit" class="primary-btn">Save trip ✓</button>
+    </div>
+  </form>
+</section>
+</div>
+
+<div class="modal-backdrop" id="authModal" aria-hidden="true">
+<section class="modal auth-modal" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+  <div class="modal-header">
+    <div>
+      <div class="eyebrow">WELCOME ABOARD</div>
+      <h2 id="authTitle">Your travel space.</h2>
+    </div>
+    <button class="icon-btn close-modal" data-close="authModal" aria-label="Close">✕</button>
+  </div>
+  <div class="auth-tabs">
+    <button class="auth-tab active" data-auth-mode="login">Log in</button>
+    <button class="auth-tab" data-auth-mode="register">Create account</button>
+  </div>
+  <form id="authForm">
+    <label id="usernameWrap" class="hidden">Your name<input id="username" autocomplete="name" placeholder="Your name"></label>
+    <label>Email address<input id="email" type="email" required autocomplete="email" placeholder="you@example.com"></label>
+    <label>Password<input id="password" type="password" required minlength="4" autocomplete="current-password" placeholder="At least 4 characters"></label>
+    <p class="auth-note">This student project stores demo account and trip data in this browser only. Do not use a real password.</p>
+    <button type="submit" class="primary-btn block-btn" id="authSubmit">Log in</button>
+  </form>
+</section>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body></html>
